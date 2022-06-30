@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+  
+  <category>
+      <pattern>*</pattern>
+      <template>
+          Welcome to the IT advisor bot. <break/>
+          Do you want me to help you choose a career?
+          <reply>
+              <text>YES</text>
+              <postback>CHOOSEYES</postback>
+          </reply>
+          <reply>
+              <text>NO</text>
+              <postback>CHOOSENO</postback>
+          </reply>
+        </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSENO</pattern>
+      <template>Ok. Please come back when you want me to help.</template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSEYES</pattern>
+      <template>
+          Great! Let's get started. <delay>1</delay>
+          Are you better at design or coding?
+          <reply>
+              <text>Design</text>
+              <postback>CHOOSEDESIGN</postback>
+          </reply>
+          <reply>
+              <text>Coding</text>
+              <postback>CHOOSECODING</postback>
+          </reply>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSEDESIGN</pattern>
+      <template>
+          You would make an excellent UX designer.
+          <button>
+              <text>UX designer</text>
+              <url>https://tinyurl.com/uxdesignersearch</url>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSECODING</pattern>
+      <template>
+          Great! <delay>1</delay>
+          Which platform do you like working with the most?
+          <reply>
+              <text>Large software projects</text>
+              <postback>CHOOSESOFTWAREDESIGNER</postback>
+          </reply>
+          <reply>
+              <text>Web page projects</text>
+              <postback>CHOOSEWEBDESIGNER</postback>
+          </reply>
+          <reply>
+              <text>Mobile apps</text>
+              <postback>CHOOSEMOBILEDESIGNER</postback>
+          </reply>
+          </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSESOFTWAREDESIGNER</pattern>
+      <template>
+          You would be an excellent software designer
+          <button>
+              <text>Software developer</text>
+              <url>https://tinyurl.com/choosesoftwaredeveloper</url>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSEWEBDESIGNER</pattern>
+      <template>
+          You would be an excellent software designer
+          <button>
+              <text>Web developer</text>
+              <url>https://tinyurl.com/choosewebdeveloper</url>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSEMOBILEDESIGNER</pattern>
+      <template>
+          You would be an excellent software designer
+          <button>
+              <text>Mobile app developer</text>
+              <url>https://tinyurl.com/choosemobileappdeveloper</url>
+          </button>
+      </template>
+  </category>
+  
+  
+</aiml>
